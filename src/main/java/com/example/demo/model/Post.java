@@ -1,26 +1,33 @@
 package com.example.demo.model;
 
 import java.util.Date;
-import java.util.GregorianCalendar;
 
 public class Post {
-    private String text;
+    private final long id;
+    private final String text;
     private Integer likes;
-    private Date creationDate;
+    private final Date creationDate;
 
-
+    public long getPostId() {
+        return id;
+    }
     public String getText() {
         return text;
     }
     public Integer getLikes() {
         return likes;
     }
+    public void setLikes(Integer likes) {
+        this.likes = likes;
+    }
     public Date getCreationDate() {
         return creationDate;
     }
 
-    public Post(String text, Date creationDate) {
+    public Post(long id, String text, Date creationDate) {
+        this.id = id;
         this.text = text;
         this.creationDate = creationDate;
+        this.likes = 0;
     }
 }
