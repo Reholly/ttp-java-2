@@ -24,7 +24,6 @@ public class PostsCreateController {
     }
     @RequestMapping(path = "/new", method = RequestMethod.GET)
     public String newPost(Model model) {
-
         return "create";
     }
 }
